@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <script src="my-layout.js"></script> <!-- Include the custom element script -->
+</head>
+<body>
+    <my-layout>
+        <div slot="content">
+            <!-- The content below will appear on the right side of the navigation -->
+            <div class="Address-section">
+                <label>From address:</label>
+                <select name="from-address" id="from-address">
+                    <option value="KGPress">KG Press company 104.-b.s.v. thottam, sanganoor road,<br>Ganapathy, Coimbatore- 641001<br>GST:1829448344</option>
+                  </select>
+                  <br>
+                <label>Customer name:</label>
+                <select name="customer-name" id="customer-name">
+                    <option value="" disabled selected>Select a customer</option>
+                </select>
+            </div>
+
+            <div class="Item-details"> 
+                <select name="item-name" id="item-name">
+                    <option value="" disabled selected>Select an item</option>
+                </select>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <button id="add-button">Add</button>
+        
+                <h2>Order Summary</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="item-table-body"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total</td>
+                            <td id="total">0</td>
+                        </tr>
+                    </tfoot>
+                </table>  
+            </div>
+        </div>
+    </my-layout>
+</body>
+</html>
